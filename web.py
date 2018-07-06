@@ -13,7 +13,7 @@ import os,sys,string
 import datetime
 import pandas as pd
 import numpy  as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 
@@ -88,6 +88,16 @@ xval_l = [[1,90]]
 yhat_f = np.matmul(xval_l,beta_l)
 print('I predict the price 90 days after the first price to be:')
 print(yhat_f)
+
+#generate graph without using XWindow
+import matplotlib
+matplotlib.use('Agg')
+# Order is important here.
+# Do not move the next import:
+import matplotlib.pyplot as plt
+
+
+
 
 
 cpdate201x_df = cp201x_df.set_index(['Date'])
